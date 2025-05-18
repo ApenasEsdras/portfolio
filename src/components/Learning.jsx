@@ -52,13 +52,13 @@ function Learning() {
             <div className="timeline-circle_1"></div>
           </div>
           <div className="timeline-component timeline-content">
-            <h3>2022 - 2024</h3>
+            <h3>2022 - 2024 ADS</h3>
             <p>Cursando Faculdade de ADS</p>
           </div>
           <div className="timeline-component timeline-content">
-            <h3>OUT-2023 - Estagio</h3>
+            <h3>OUT-2023 Estagio</h3>
             <p>
-              Inicio do Estagio{" "}
+              Inicio do Estágio{" "}
             </p>
           </div>
           <div className="timeline-middle_2">
@@ -72,8 +72,8 @@ function Learning() {
             <div className="timeline-circle_3"></div>
           </div>
           <div className=" timeline-component timeline-content">
-            <h3>Fev-2024 - Contratado</h3>
-            <p>Fui contratado pela empresa do meu estagio para ser Analista de desenvolvimento - Fullstack</p>
+            <h3>Fev-2024 Contratado</h3>
+            <p>Fui contratado pela empresa do meu estágio para ser Analista de desenvolvimento - Fullstack</p>
           </div>
         </div>
       </section>
