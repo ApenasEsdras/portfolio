@@ -1,2 +1,2 @@
-# portfolio 
-### https://portfolio-ten-tau-40.vercel.app/
+Meu portfolio feito em react JS e utilizando SASS, mostrando um pouco de minha trajetoria como dev 🧑‍💻💓 
+baseada no portifolio do @https://github.com/nycholasmarques
