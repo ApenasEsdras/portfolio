@@ -1,0 +1,39 @@
+.bubbles {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    height: 90vh;
+}
+
+.bubble {
+    width: 30px;
+    height: 30px;
+    background: #00b3ff;
+    margin: 0 4px;
+    border-radius: 50px;
+    box-shadow:
+    0 0 0 10px #0d00ff44,
+    0 0 50px #00a2ff, 
+    0 0 20px #0080ff;
+    transform: translateY(30vh) scale(0);
+    animation: animateBg linear infinite;
+    z-index: -2;
+}
+
+@keyframes animateBg {
+    0% {
+        transform: translateY(100vh) scale(0.3);
+    }
+    100% {
+        transform: translateY(-10vh ) scale(1); 
+    }
+}
+
+.bubble:nth-of-type(even) {
+    background: #7d2dff;
+    box-shadow: 0 0 0 10px #ff652d44,
+    0 0 50px #2d8bff,
+    0 0 20px #5e2dff,
+}
