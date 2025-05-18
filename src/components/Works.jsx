@@ -3,39 +3,64 @@ import "../styles/components/works.scss";
 import "animate.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SiFlutter, SiFirebase, SiGooglecloud, SiTypescript } from "react-icons/si";
+import {
+  SiFlutter,
+  SiFirebase,
+  SiGooglecloud,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+} from "react-icons/si";
 import forcaDeVendasImg from "../img/project-img/prototipo_App_Forca_de_vendas.svg";
-
+import monibankImg from "../img/project-img/monibank.png";
 
 const projects = [
   {
     id: 1,
     title: "Sistema Força de vendas",
     category: "Websites",
-     image: forcaDeVendasImg,
+    image: forcaDeVendasImg,
     year: "2023",
     status: "Concluído",
     description:
       "Sistema web e Mobile, criado em Flutter desenvolvido em equipe para a empresa Innovaro. A aplicação permite a realização de pedidos em tempo real diretamente nos sistema ERP online ou offline.",
     stacks: [
+      { name: "Flutter", icon: <SiFlutter id="flutter-icon" /> },
+      { name: "Firebase", icon: <SiFirebase id="firebase-icon" /> },
+      { name: "Google Cloud Platform", icon: <SiGooglecloud id="gcp-icon" /> },
+      { name: "Cloud Functions (TypeScript)", icon: <SiTypescript id="ts-icon" /> },
+    ],
+    links: [
       {
-        name: "Flutter",
-        icon: <SiFlutter id="flutter-icon" />,
-      },
-      {
-        name: "Firebase",
-        icon: <SiFirebase id="firebase-icon" />,
-      },
-      {
-        name: "Google Cloud Platform",
-        icon: <SiGooglecloud id="gcp-icon" />,
-      },
-      {
-        name: "Cloud Functions (TypeScript)",
-        icon: <SiTypescript id="ts-icon" />,
+        url: "https://www.figma.com/proto/xZ9qIVOkxwqHymOQrNnoQj/prototipo-App-For%C3%A7a-de-vendas?node-id=308-13880&p=f&t=PST5KuFD89lupieH-0&scaling=scale-down&content-scaling=fixed&page-id=278%3A690&starting-point-node-id=308%3A13930",
+        label: "Protótipo Figma",
       },
     ],
-    site: "https://www.figma.com/proto/xZ9qIVOkxwqHymOQrNnoQj/prototipo-App-For%C3%A7a-de-vendas?node-id=308-13880&p=f&t=PST5KuFD89lupieH-0&scaling=scale-down&content-scaling=fixed&page-id=278%3A690&starting-point-node-id=308%3A13930",
+  },
+  {
+    id: 2,
+    title: "landing page - monibank",
+    category: "Websites",
+    image: monibankImg,
+    year: "2023",
+    status: "Concluído",
+    description: "Landing page ilustrativa do banco fictício monibank",
+    stacks: [
+      { name: "HTML", icon: <SiHtml5 id="html5-icon" /> },
+      { name: "Css", icon: <SiCss3 id="Css3-icon" /> },
+      { name: "Javascript", icon: <SiJavascript id="Javascript-icon" /> },
+    ],
+    links: [
+      {
+        url: "https://monibank-kappa.vercel.app/",
+        label: "Site",
+      },
+      {
+        url: "https://github.com/ApenasEsdras/monibank",
+        label: "Código",
+      },
+    ],
   },
 ];
 
@@ -92,7 +117,6 @@ function Works() {
     return false;
   });
 
-
   return (
     <section className="four-part">
       <div className="works" id="section-works">
@@ -133,17 +157,13 @@ function Works() {
                       ))}
                     </div>
                     <div className="project-detail_links">
-                      {project.site && (
-                        <p>
-                          <a
-                            href={project.site}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Prototipo Figma
+                      {project.links?.map((link, idx) => (
+                        <p key={idx}>
+                          <a href={link.url} target="_blank" rel="noreferrer">
+                            {link.label}
                           </a>
                         </p>
-                      )}
+                      ))}
                     </div>
                   </div>
                   <hr />
