@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import "../styles/components/works.scss";
 import "animate.css";
 import { gsap } from "gsap";
@@ -19,12 +19,13 @@ const projects = [
   {
     id: 1,
     title: "Sistema Força de vendas",
-    category: "Websites",
+    category: "Aplicativos",
     image: forcaDeVendasImg,
     year: "2023",
     status: "Concluído",
     description:
-      "Sistema web e Mobile, criado em Flutter desenvolvido em equipe para a empresa Innovaro. A aplicação permite a realização de pedidos em tempo real diretamente nos sistema ERP online ou offline.",
+      "Sistema web e Mobile, criado em Flutter desenvolvido em equipe para a empresa Innovaro. A aplicação permite a " +
+      "realização de pedidos em tempo real diretamente nos sistema ERP online ou offline.",
     stacks: [
       { name: "Flutter", icon: <SiFlutter id="flutter-icon" /> },
       { name: "Firebase", icon: <SiFirebase id="firebase-icon" /> },
@@ -33,8 +34,8 @@ const projects = [
     ],
     links: [
       {
-        url: "https://www.figma.com/proto/xZ9qIVOkxwqHymOQrNnoQj/prototipo-App-For%C3%A7a-de-vendas?node-id=308-13880&p=f&t=PST5KuFD89lupieH-0&scaling=scale-down&content-scaling=fixed&page-id=278%3A690&starting-point-node-id=308%3A13930",
-        label: "Protótipo Figma",
+        url: "https://play.google.com/store/apps/details?id=br.com.innovaro.sistemas.appinnovaro&hl=pt_BR",
+        label: "App Play Store",
       },
     ],
   },
@@ -63,8 +64,6 @@ const projects = [
     ],
   },
 ];
-
-const categories = ["Websites"];
 
 function Works() {
   useLayoutEffect(() => {
@@ -104,37 +103,13 @@ function Works() {
     };
   }, []);
 
-  const [activeCategory, setActiveCategory] = useState("Websites");
-
-  const filterByCategory = (category) => {
-    setActiveCategory(category);
-  };
-
-  const filteredProjects = projects.filter((project) => {
-    if (activeCategory === "All" || project.category === activeCategory) {
-      return true;
-    }
-    return false;
-  });
-
   return (
     <section className="four-part">
       <div className="works" id="section-works">
         <h2 id="title-work">Portfolio</h2>
         <div className="work-container">
-          <div className="category">
-            {categories.map((category) => (
-              <h3
-                key={category}
-                onClick={() => filterByCategory(category)}
-                className={category === activeCategory ? "active" : ""}
-              >
-                {category}
-              </h3>
-            ))}
-          </div>
           <div className="projects-container">
-            {filteredProjects.map((project) => (
+            {projects.map((project) => (
               <div key={project.id} className="project-item">
                 <div className="project-info">
                   <figure className="animate-image">

@@ -74,10 +74,12 @@ function About() {
       <div className="about" id='section-about'>
         <h2 id='title-section'>Sobre mim</h2>
         <div className="flx-about">
-          <img src="https://avatars.githubusercontent.com/u/93005998?v=4" alt="Esdras De Oliveira" className='profile' />
+          <img src="https://avatars.githubusercontent.com/u/93005998?v=4" alt="Esdras De Oliveira" className='profile'/>
           <div className="about-details">
             <div className='about-text'>
-              <p>Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2022. Sou Formado em Análise e Desenvolvimento de Sistemas (ADS) e atuo como Analista de desenvolvimento Fullstack, aprimorando minhas habilidades tanto para o crescimento profissional quanto pessoal. Estou sempre em busca de oferecer e proporcionar as melhores experiências em meus projetos e serviços.</p>
+              <p>Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2022. Sou Formado em Análise e 
+                Desenvolvimento de Sistemas (ADS) e atualmente atuo como desenvolvimento Fullstack. Meu foco esta no 
+                desenvolvimento de aplicações moveis com flutter, mas também posuo experiencia com sistemas ERP.</p>
               <div>
                 <div className='icons-container'>
                 <div className='icons-container_item' id='item-1'>
