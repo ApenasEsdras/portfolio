@@ -77,9 +77,9 @@ function About() {
           <img src="https://avatars.githubusercontent.com/u/93005998?v=4" alt="Esdras De Oliveira" className='profile'/>
           <div className="about-details">
             <div className='about-text'>
-              <p>Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2022. Sou Formado em Análise e 
-                Desenvolvimento de Sistemas (ADS) e atualmente atuo como desenvolvimento Fullstack. Meu foco esta no 
-                desenvolvimento de aplicações moveis com flutter, mas também posuo experiencia com sistemas ERP.</p>
+              <p>Apaixonado por tecnologia, ingressei na área de desenvolvimento em 2022. Sou formado em Análise e 
+                Desenvolvimento de Sistemas (ADS) e atualmente atuo como desenvolvimento Full-Stack. Meu foco está no 
+                desenvolvimento de aplicações móveis com Flutter, mas também posuo experiência com sistemas ERP.</p>
               <div>
                 <div className='icons-container'>
                 <div className='icons-container_item' id='item-1'>
